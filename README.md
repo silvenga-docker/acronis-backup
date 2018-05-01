@@ -1,2 +1,2 @@
 # acronis-backup
-A valiant attempt at Dockerizing Acronis Backup.
+A valiant attempt at Dockerizing the Acronis Backup Management Server.
