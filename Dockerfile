@@ -7,6 +7,7 @@ RUN set -xe \
     && DEBIAN_FRONTEND=noninteractive apt-get install -y \
         rpm \
         wget \
+        rsync \
     && rm -r /var/lib/apt/lists/* \
     && wget https://dl.acronis.com/u/AcronisBackup12.5/Release/AcronisBackup_12.5_64-bit.x86_64 -O installer \
     && chmod +x ./installer \
