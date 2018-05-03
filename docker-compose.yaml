@@ -1,0 +1,10 @@
+version: '2'
+services:
+  acronis:
+    build: .
+    ports:
+      - 9877:9877
+      - 7780:7780
+    volumes:
+      - ./data:/data
+    stop_grace_period: 30s
