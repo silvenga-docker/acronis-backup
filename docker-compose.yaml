@@ -5,6 +5,18 @@ services:
     ports:
       - 9877:9877
       - 7780:7780
+    links:
+      - postgres
     volumes:
-      - ./data:/data
+      - ./data/acronis:/etc/Acronis/
+    environment:
+      DB_HOSTNAME: postgres
     stop_grace_period: 30s
+  postgres:
+    image: postgres:12
+    volumes:
+      - ./data/postgres:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: acronis
+      POSTGRES_USER: acronis
+      POSTGRES_PASSWORD: "SilverLight"
